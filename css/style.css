@@ -22,9 +22,168 @@
     line-height: 1.2;
     margin: 0;
   }
+
+  /*======popup======*/
   
+  div.hudden {
+    display: none;
+ }
+ 
+  .popup {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .popup-wrapper {
+  position: relative;
+  }
+
+  .close-button {
+    display: block; 
+    height: 18px;
+    width: 18px;
+
+    background-color: transparent;
+    border: none;
+    cursor: pointer;  
+
+    position: absolute;
+    top: -25px;
+    right: 0; 
+
+    background-image: url(../svg/form-x.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .visually-hidden {
+    display: none;
+  }
+
+  .feedback-form {
+    padding: 47px 30px 55px;
+    background-color: white;
+    max-width: 390px;
+    max-height: 100vh;
+    
+  }
+  
+  .feedback-title {
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 20px;
+    color: #0f0d0e;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.feedback-title::after {
+    content: "";
+    display: block;
+    position: relative;
+    width: 66px;
+    height: 3px;
+    margin: 12px auto 28px;
+    background-color: #e1d9bd;
+}
+
+.feedback-form-question {
+    display: block;
+    margin: 23px 0 8px;
+    font-size: 13px;
+}
+
+.field {
+    display: block;
+    height: 47px;
+    width: 100%;
+    padding-left: 17px;
+    padding-right: 17px;
+  
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    background-color: #f4f7f6;
+    border-radius: 0;
+    border: 1px solid #f4f7f6;
+  
+    font-family: inherit;
+    font-size: 13px;
+}
+
+.field:focus {
+    outline: none;
+    border: 1px solid #b59f5b;    
+}
+
+.radio-button {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+.radio-text:before {
+    content: "";
+    display: inline-block;
+    background-image: url(../svg/form-empty-circle.svg);
+    height: 18px;
+    width: 18px;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.radio-button:checked ~ .radio-text:before {
+    background-image: url(../svg/form-circle.svg);
+}
+
+.radio-text {
+    font-size: 13px;
+    margin-right: 15px;
+}
+
+select.field {
+    background-image: url(../svg/form-arrows.svg);
+    background-size: 10px auto;
+    background-repeat: no-repeat;
+    background-position: right 13px center;
+    margin-bottom: 30px;
+}
+
+textarea.field {
+    min-height: 131px;
+    min-width: 100%;
+    max-width: 100%;
+    padding: 17px;
+}
+
+.feedback-button {
+    display: inline-block;
+    width: 100%;
+    height: 47px;
+    margin-top: 25px;
+    background-color: #b59f5b;
+    border: none;
+    font-family: OpenSans-Bold, sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ffffff;
+}
+    
+.feedback-button:hover {
+    background-color: #323232;
+}
+
   /*======header======*/
-  
+   
   .header-wrapper {
     width: 100%;
     max-width: 1200px;
@@ -42,7 +201,7 @@
     background-color: #000000;
     position: relative;
     z-index: 0;
-    padding: 32px 248px 130px;
+    padding: 32px 0 130px;
   }
   
   .header::after {
@@ -68,7 +227,7 @@
     margin: 0;
     box-sizing: border-box;
   }
-  
+
   .menu-list {
     list-style: none;
     display: flex;
@@ -82,7 +241,7 @@
   .menu a {
     text-decoration: none;
     color: #ffffff;
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
   }
   
@@ -143,8 +302,6 @@
   .trends {
     display:flex;
     flex-wrap: wrap;
-    
-
     min-height: 320px;
     padding-top: 28px;
   }
@@ -311,8 +468,9 @@
   }
   
   .publication-text {
-    max-width: 272px;
+    width: 100%;
     margin-left: 30px;
+    margin-right: 135px;
   }
   
   /*======aside======*/
@@ -682,6 +840,13 @@
   }
   
   @media (min-width:641px) and (max-width: 1199px) {
+ 
+    /*======header======*/
+
+    .header-wrapper {
+      width: 100%;
+      
+    }
 
     .header {
       background-image: url(../images/banner-bg-tablet.jpg);
@@ -721,15 +886,17 @@
     }
 
     .welcome-title {
-      max-width: 650px;
       margin-top: 85px;
       font-size: 40px;
       line-height: 1.4;
+      margin-left: auto;
+      margin-right: auto;
     }
     
+     /*======trends======*/
+
     .trends {
       width: 100%;
-      
     }
     
     .trenda {
@@ -770,17 +937,23 @@
      margin-top: 0;
      margin-bottom: 4px;
     }
-     
+
+   /*======page-wrapper======*/
+
     .page-wrapper {
      margin: 47px auto 0 auto;
      padding: 0 35px 0 35px;
     }
+
+   /*======main======*/
+
     .main {
-      max-width: 778px;
+      width: 100%;
       display: block;
       max-width: 778px;
     }
     .publication {
+      width: 100%;
       flex-flow: column wrap;
     }
 
@@ -789,11 +962,11 @@
      min-width: 0;
     }
     .publication-description {
-    margin: 10px 0 0;
+     margin: 10px 0 0;
     }
 
     .publication-text {
-      max-width: 393px;
+      width: 100%;
       margin:10px 0 0;
     }
     
@@ -806,11 +979,15 @@
       margin-top: 26px;
     }
 
+    /*======aside======*/
+
     .aside {
      min-width: 270px;
      max-width: 270px;
      margin-left: 35px;
     }
+
+   /*======products======*/
 
     .all-product {
      padding: 0 35px;
@@ -832,6 +1009,8 @@
      margin-left: 0;
     }
 
+    /*======footer======*/
+
     .footer-wrapper {
       padding: 0 35px;
     }
@@ -843,16 +1022,35 @@
 
   @media (max-width: 640px) {
 
+  .popup-wrapper {
+      margin: auto;
+      max-width: 330px;
+  }
+
+  .feedback-form {
+      padding: 27px 24px 32px;
+      
+  }
+
+  .close-button {
+      top: -32px;
+  }
+
+  textarea.field {
+      resize: none;
+  }
+
+  /*=====header======*/
+
   .header {
     background-image: url(../images/banner-mobile.jpg);
-    padding-top: 30px;
-    padding-bottom: 210px;
+    padding: 30px 28px 210px 28px;
   }
 
   .menu {
     flex-direction: column-reverse;
     align-items: center;
-    padding: 0 18px;
+    padding: 0 18px 0 18px;
   }
   
   .menu-list {
@@ -897,13 +1095,16 @@
   }
 
   .welcome-title {
-    font-size: 26px;
+    width: 277px;
+    font-size: 25px;
     line-height: 1.4;
-    padding: 0 30px;
-    margin-top: 0;
+    padding: 0;
+    margin: auto;
     align-self: center;
   }
   
+  /*======trend======*/
+
   .trend {
     margin-top: 0px;
     padding-top: 44px;
@@ -913,23 +1114,64 @@
     font-size: 16px;
   }
   
+  /*======main======*/
+
   .page-wrapper {
     margin-top: 45px;
     padding-top: 0;
     flex-direction: column;
   }
 
+  .main {
+    width: 100%;
+  }
+
+ /*======publication======*/
+
   .publication {
     flex-direction: column;
+    border-bottom: 3px #eeeeee solid;
+    padding-bottom: 25px;
+  }
+
+  .publication:not(:first-child) {
+    margin-top: 35px;
   }
 
   .publication-img {
+    width: 100%;
     min-width: 0;
   }
   
+  .publication-text {
+   width: 100%;
+   margin: 17px 0 0 0;
+  }
+
+  .publication-name {
+    font-size: 16px;
+    line-height: 1.25;
+    margin-bottom: 16px;
+  }
+  
+  .publication-content {
+    margin-top: 20px;
+  }
+  
+  .publication-content > p {
+    margin-top: 0;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  
+  .publication-content > p:not(:first-child) {
+    margin-top: 20px;
+  }
+
+ /*======aside======*/
+
   .aside {
-    min-width: 0px;
-    max-width: 640px;
+    width: 100%;
     margin-left: 0;
     margin-top: 39px;
   } 
@@ -937,16 +1179,37 @@
   .aside-item {
     flex-direction:column;
   }
+
+ /*======search, mailing======*/
+
+  .search-field {
+    padding-left: 18px;
+    width: 283px;
+  }
+  
+  .aside-item {
+    margin-top: 44px;
+  }
   
   .all-product {
   margin: 30px auto 0px;
   }
   
+ /*======product======*/
+
   .products {
     margin-top: 30px;
     flex-direction: column;
   }
 
+  .product {
+    margin-bottom: 50px;
+  }
+
+  .socials {
+    margin-top: 42px;
+    margin-bottom: 42px;
+  }
 }
 
  @media (max-width: 640px) and (orientation: portrait) {
@@ -982,7 +1245,6 @@
     margin-top: 3px;
     padding:0;
   }
-
 
    .content {
     padding: 26px 20px;

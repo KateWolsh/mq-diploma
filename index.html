@@ -8,11 +8,49 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<div class="popup hudden">
+  <div class="popup">
+    <div class="popup-wrapper">
+      <button class="close-button" type="button">
+				<span class="visually-hidden">Закрыть окно</span>
+			</button>
+      <form class="feedback-form">
+        <h3 class="feedback-title">Ваш фидбек</h3>
+        <label class="feedback-form-group">
+					<span class="feedback-form-question">Как часто вы заходите на сайт?</span>
+					<select class="field"> 
+						<option>Почти каждый день</option>
+						<option>Раз в несколько дней</option>
+						<option>Раз в несколько недель</option>
+						<option>Несколько раз в год</option>
+					</select>
+        </label>
+        <span class="feedback-form-question">Вы подписаны на e-mail рассылку?</span>
+				<label>
+					<input class="radio-button" type="radio" name="radio-group">
+					<span class="radio-text">Да</span>
+				</label>
+        <label>
+					<input class="radio-button" type="radio" name="radio-group">
+					<span class="radio-text">Нет</span>
+				</label>
+				<label class="feedback-form-group">
+					<span class="feedback-form-question">Расскажите, какой контент вы хотели бы видеть на нашем сайте?</span>
+					<textarea class="field" placeholder="Может, больше рецептов?" required=""></textarea>
+				</label>
+				<button class="feedback-button" type="submit">
+					<span class="feedback-button-text">Отправить</span> 
+				</button>  
+      </form>
+    </div>
+  </div>
+</div>
+
     <header class="header">
         <div class="header-wrapper">
           <div class="menu">
             <a class="logo-link" href="/">
-              <img class="logo" src="svg/noemi-logo.svg" alt="логотип ноэми" width="170"> </a>   
+              <img class="logo" src="svg/noemi-logo.svg" alt="логотип ноэми" width="180"> </a>   
             <nav class="header-menu">
               <button class=menu-button>
                 <span class="menu-button-label"></span>
