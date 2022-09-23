@@ -5,23 +5,19 @@
 }
 
 @font-face {
-  font-family: open-sans;
-  src: url(../fonts/OpenSans-Regular.woff),
-       url(../fonts/OpenSans-Regular.ttf);
-  font-weight: 400;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: open-sans;
-  src: url(../fonts/OpenSans-Bold.woff)
-       url(../fonts/OpenSans-Bold.ttf);
-  font-weight: 400;
-  font-style: bold;
-}
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  }
+  
+  @font-face {
+  font-family: "Open Sans";
+  src: url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  }
 
 body {
-  font-family: open-sans-r, sans-serif;
+  font-family: open-sans, sans-serif;
+  font-weight: regular;
   font-size: 16px;
   line-height: 1.2;
   margin: 0;
@@ -264,7 +260,7 @@ textarea.field {
 }
 
 .welcome-title {
-  font-family: open-sans-b, sans-serif;
+  font-weight: 700;
   font-size: 40px;
   line-height: 1.6;
   text-transform: uppercase;
@@ -284,9 +280,10 @@ textarea.field {
 }
 
 .trends-item {
+  font-family: Open Sans;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 0px;
-  font-family: open-sans-b, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.3;
@@ -371,9 +368,10 @@ textarea.field {
 }
 
 .trend-name {
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 19px;
   line-height: 1.2;
 }
 
@@ -387,7 +385,8 @@ textarea.field {
 
 .trend-teg-link {
   text-decoration: none;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
@@ -449,7 +448,8 @@ textarea.field {
 
 .publication-teg-link {
   text-decoration: none;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   color: #b59f5b;
   font-size: 14px;
@@ -461,7 +461,8 @@ a {
 }
 
 .publication-name {
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1.2;
@@ -475,7 +476,8 @@ a {
 }
 
 .author {
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   color: #000000;
   font-size: 12px;
 }
@@ -508,7 +510,8 @@ p {
 .top {
   text-align: center;
   margin-bottom: 0px;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.3;
@@ -553,7 +556,8 @@ p {
 }
 
 .name-new-text {
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   font-size: 13px;
   line-height: 18px;
   text-transform: uppercase;
@@ -603,7 +607,8 @@ p {
   border: none;
   width: 100%;
   background-color: #b59f5b;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 13px;
@@ -633,7 +638,8 @@ p {
   align-items: center;
   align-content: space-between;
   text-decoration: none;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   text-transform: uppercase;
   color: #0f0d0e;
   font-size: 12px;
@@ -655,7 +661,8 @@ p {
   align-items: center;
   align-content: space-between;
   text-decoration: none;
-  font-family: open-sans-b, sans-serif;
+  font-family: Open Sans;
+  font-weight: 700;
   color: #000000;
   font-size: 14px;
   padding: 0 5px 0 0;
@@ -679,7 +686,8 @@ p {
 .list-topic-amount {
   display: inline-block;
   vertical-align: top;
-  font-family: open-sans-b, sans-serif;
+  text-decoration: none;
+  font-family: Open Sans;
   color: #b59f5b;
   font-size: 12px;
 }
@@ -696,7 +704,8 @@ p {
 .product-item {
   text-align: center;
   margin-bottom: 0px;
-  font-family: open-sans-b, sans-serif;
+  text-decoration: none;
+  font-family: Open Sans;
   text-transform: uppercase;
   font-size: 14px;
   line-height: 1.3;
@@ -749,7 +758,8 @@ picture {
 }
 
 .product-name {
-  font-family: open-sans-b, sans-serif;
+  text-decoration: none;
+  font-family: Open Sans;
   text-transform: uppercase;
   font-size: 20px;
   line-height: 1.2;
@@ -795,7 +805,8 @@ picture {
   border: none;
   max-width: 140px;
   background-color: #b59f5b;
-  font-family: open-sans-b, sans-serif;
+  text-decoration: none;
+  font-family: Open Sans;
   text-transform: uppercase;
   color: #ffffff;
   font-size: 13px;
@@ -864,7 +875,8 @@ picture {
 .footer-copirate-link {
   text-decoration: none;
   color: #999999;
-  font-family: open-sans-b, sans-serif;
+  text-decoration: none;
+  font-family: Open Sans;
   font-size: 12px;
 }
 
@@ -1114,7 +1126,7 @@ picture {
 
   .welcome-title {
     width: 277px;
-    font-size: 25px;
+    font-size: 24px;
     line-height: 1.4;
     padding: 0;
     margin: auto;
